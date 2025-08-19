@@ -52,20 +52,24 @@ CSA 的目标是 **超越简单拒绝**：
 
 ## 🚀 快速上手
 
+### 1. 模型下载
+Oyster-1 is available on Hugging Face:
+
+🔗 [https://huggingface.co/Alibaba-AAIG/Oyster-1](https://huggingface.co/Alibaba-AAIG/Oyster-1)
+
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/your-org/oyster1.git
-cd oyster1
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# 2. 安装依赖
-pip install -r requirements.txt
+model_name = "Alibaba-AAIG/Oyster-1"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+prompt = "I feel like ending it all. Nothing matters anymore."
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+outputs = model.generate(**inputs, max_new_tokens=200)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
-# 3. 下载模型权重（示例）
-python scripts/download_model.py --model Oy1-14B
-
-# 4. 运行推理
-python inference.py --model Oy1-14B --prompt "How can I cope with stress safely?"
 ```
+> 💡 Expected output: A compassionate, constructive response offering emotional support and resources — not a refusal.
 ---
 
 ## 📚 引用本工作
