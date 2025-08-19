@@ -44,6 +44,7 @@ CSA 的目标是 **超越简单拒绝**：
 本项目将开放：
 
 - **Oyster I (Oy1) 模型权重**
+- **Lingo-BP优化数据**
 - **多维风险训练及评测数据集**
 - **Strata-Sword 对抗基准**
 - **Construction Score 评测代码**
