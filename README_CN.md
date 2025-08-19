@@ -8,7 +8,7 @@
 🦪 **为什么叫 “Oyster”？**  
 就像牡蛎在保护自己的同时，将一粒砂子打磨成珍珠，Oyster I 不仅能防范恶意风险，还能将潜在的危险互动转化为 **安全且富有价值的交流**。
 
-![Oyster Logo](./assets/oyster_logo.png) 
+![Oyster Logo](./assets/oyster_intro.png) 
 
 
 ---
